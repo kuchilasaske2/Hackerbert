@@ -1,26 +1,31 @@
 package br.com.restaurant.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.restaurant.model.Restaurante;
-import br.com.restaurant.service.RestauranteService;
+import br.com.restaurant.repository.RestauranteRepository;
 
 @RestController
 @RequestMapping("/api/restaurantes")
 public class RestauranteController {
 
-	@Autowired
-	private RestauranteService restauranteService;
-	
-	@PostMapping
-	public ResponseEntity<Restaurante> create(@RequestBody Restaurante restaurante){
-		
-		Restaurante created = restauranteService.save(restaurante);
-		return ResponseEntity.ok(created);
-	}
+    @Autowired
+    private RestauranteRepository restauranteRepository;
+
+    @GetMapping
+    public List<Restaurante> getAllRestaurantes() {
+        return restauranteRepository.findAll();
+    }
+
+    @PostMapping
+    public Restaurante createRestaurante(@RequestBody Restaurante restaurante) {
+        return restauranteRepository.save(restaurante);
+    }
 }
