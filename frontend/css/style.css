@@ -1,0 +1,199 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: center;/* <- mudar isso daqui depois*/
+}
+
+/* Barra de menu */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--navbar-background-color);
+    color: var(--navbar-text-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar button {
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    transition: background-color 0.3s;
+}
+
+.navbar button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+/* Formulários */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--form-background-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form h2 {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+    width: 100%;
+}
+
+form input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+/* Temas */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --button-background-color: #007bff;
+    --button-text-color: #ffffff;
+    --button-hover-background-color: #0056b3;
+    --border-color: #dddddd;
+    --form-background-color: #f9f9f9;
+    --navbar-background-color: #007bff;
+    --navbar-text-color: #ffffff;
+}
+
+body.dark {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --button-background-color: #1a73e8;
+    --button-text-color: #ffffff;
+    --button-hover-background-color: #0056b3;
+    --border-color: #333333;
+    --form-background-color: #1e1e1e;
+    --navbar-background-color: #1a73e8;
+    --navbar-text-color: #ffffff;
+}
+
+/* Botão de tema */
+#themeToggle {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    transition: background-color 0.3s;
+}
+
+#themeToggle:hover {
+    background-color: var(--button-hover-background-color);
+}
+
+/*Restaurante CSS*/
+.container {
+    margin: 2rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.search-bar {
+    margin-bottom: 2rem;
+}
+
+.restaurant-list {
+    list-style: none;
+    padding: 0;
+}
+
+.restaurant-item {
+    padding: 1rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+}
+
+.comment-section {
+    margin-top: 2rem;
+}
+
+.comment {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar button {
+        margin: 10px 0;
+        width: 80%;
+    }
+
+    form {
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #themeToggle {
+        padding: 8px;
+    }
+
+    form label, form input, form button {
+        font-size: 14px;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    .navbar button {
+        width: 100%;
+        padding: 8px;
+    }
+}

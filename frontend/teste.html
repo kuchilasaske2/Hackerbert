@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <script src="jquery/jquery-3.7.1.min.js"></script>
+    <script src="js/script2.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+    <div class="navbar">
+        <button onclick="window.location.href='index.html'">Voltar</button>
+        <button id="themeToggle">Alternar Tema</button>
+    </div>
+    <div id="main">
+
+        <h1>Do the List</h1>
+        <h2>Login</h2>
+        <input type="text" id="e"><br>
+        <input type="password" id="p"><br>
+        <button onclick="authenticate()">Login</button>
+
+        <h2>Tasks</h2>
+        <!-- parte da chamada de requisição -->
+        <input type="text" id="addcomment-text" onkeyup="search()">
+        <button onclick="commentCreate()">Adicionar</button><br>
+
+        <div id="comment">
+
+        </div>
+
+
+    </div>
+    <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
+   
+</body>
+</html>
