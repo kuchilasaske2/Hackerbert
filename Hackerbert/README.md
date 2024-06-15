@@ -1,2 +1,0 @@
-# Hackerbert
-Software engineering
